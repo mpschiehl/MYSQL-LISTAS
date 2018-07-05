@@ -9,4 +9,7 @@
  SELECT ataque,especial_ataque,nome,defesa,especial_defesa FROM pokemons ORDER BY  ataque;
  SELECT AVG(ataque)from pokemons; 
  SELECT SUM(ataque) FROM pokemons;
+ SELECT AVG(especial_ataque) FROM pokemons where nome like 'P%';
+
+
  
