@@ -1,4 +1,5 @@
- select id,nome,codigo,categoria,altura,peso,hp,ataque,defesa,especial_ataque,especial_defesa,velocidade,descricao from pokemons;
+/*Tabela Pokemons*/
+ SELECT id,nome,codigo,categoria,altura,peso,hp,ataque,defesa,especial_ataque,especial_defesa,velocidade,descricao from pokemons;
  SELECT ataque,especial_ataque,defesa,especial_defesa FROM pokemons;
  SELECT  nome,categoria, ataque FROM pokemons ORDER BY ataque;
  SELECT peso,altura, (peso/(altura*altura)) FROM pokemons;
@@ -10,6 +11,16 @@
  SELECT AVG(ataque)from pokemons; 
  SELECT SUM(ataque) FROM pokemons;
  SELECT AVG(especial_ataque) FROM pokemons where nome like 'P%';
-
+/*Tabela cidades*/
+SELECT estado,cidade FROM cidades;
+SELECT cidade FROM cidades WHERE cidade LIKE 'A%';
+SELECT cidade FROM cidades WHERE cidade LIKE '%apar%';
+SELECT cidade FROM cidades WHERE cidade LIKE 'W%';
+SELECT cidade FROM cidades WHERE cidade LIKE '%tuba' ORDER BY estado DESC;
+SELECT cidade FROM cidades where length(cidade)>15 ORDER BY length(cidade) DESC;
+SELECT COUNT(estado) FROM cidades WHERE estado ='SC';
+SELECT COUNT(estado) FROM cidades WHERE estado ='SP';
+SELECT cidade FROM cidades where length(cidade)= 10 ORDER BY length(cidade) DESC;
+/*Tabela alunos*/
 
  
