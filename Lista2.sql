@@ -22,5 +22,14 @@ SELECT COUNT(estado) FROM cidades WHERE estado ='SC';
 SELECT COUNT(estado) FROM cidades WHERE estado ='SP';
 SELECT cidade FROM cidades where length(cidade)= 10 ORDER BY length(cidade) DESC;
 /*Tabela alunos*/
+SELECT nome,cpf, nick,signo,numero_favorito,cor_preferida,nota_1,nota_2,nota_3,nota_4,data_nascimento
+ FROM alunos;
+SELECT nome,nota_1 FROM alunos WHERE nota_1 >9 ORDER BY nome,nota_1;
+SELECT nome,nota_1 '1º',nota_2 '2º',nota_3 '3º',nota_4 '4º',((nota_1+nota_2+nota_3+nota_4)/4) 'Média'FROM alunos ORDER BY nome;
+SELECT COUNT(signo)'Signo Peixe' FROM alunos WHERE signo ='Peixes';
+SELECT SUM(nota_1) 'Soma da 1° nota' FROM  alunos;
+SELECT AVG(nota_2) 'Média da 2° nota' FROM  alunos;
+SELECT nome, nota_1 FROM alunos alunos WHERE nota_1 = (SELECT MIN(nota_1)FROM alunos);
+SELECT nome,nota_1 '1º',nota_2 '2º',nota_3 '3º',nota_4 '4º'FROM alunos WHERE nome = LENGTH(NOME);
 
- 
+
