@@ -1,9 +1,14 @@
-
+DROP DATABASE IF EXISTS lista02;
+CREATE DATABASE lista02;
+USE lista02;
 DROP TABLE IF EXISTS cidades;
+
+
 CREATE TABLE cidades (
 	estado CHAR(2),
 	cidade VARCHAR(100)
 );
+
 
 INSERT INTO cidades VALUES 
 ('AC', 'Acrelândia'),
