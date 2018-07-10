@@ -42,3 +42,4 @@ IF((nota_1+nota_2+nota_3+nota_4)/4 >7 , 'Aprovado','Em Exame'))'Situação'
 FROM alunos; -- 14
 SELECT nome,nota_1 '1º',nota_2 '2º',nota_3 '3º',nota_4 '4º'FROM alunos WHERE  ((nota_1+nota_2+nota_3+nota_4)/4) =(SELECT MIN((nota_1+nota_2+nota_3+nota_4)/4)FROM alunos);-- 15
 SELECT COUNT((nota_1+nota_2+nota_3+nota_4)/4 >7)'Quantidade de Alunos Acima de 7'FROM alunos WHERE (nota_1+nota_2+nota_3+nota_4)/4 >7; -- 16
+SELECT nome,nick FROM alunos WHERE LENGTH(nick) =5;-- 17
