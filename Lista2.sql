@@ -46,3 +46,7 @@ SELECT nome,nick FROM alunos WHERE LENGTH(nick) =5;-- 17
 SELECT nome,cor_preferida,CAST((nota_1+nota_2+nota_3+nota_4)/4 AS DECIMAL(4,2))'Média' FROM alunos 
 WHERE (cor_preferida = 'Ouro' OR cor_preferida ='Amarelo-torrado') AND (nota_1+nota_2+nota_3+nota_4)/4 >6.5;-- 18
 SELECT nome,YEAR(data_nascimento)'Ano de Nascimento' FROM alunos; -- 19
+SELECT nick,MONTH(data_nascimento)'Mes de Nascimento' FROM alunos WHERE MONTH(data_nascimento)>6 ; -- 20
+SELECT COUNT(YEAR(data_nascimento))'Nascidos em 1996'FROM alunos WHERE YEAR(data_nascimento) = 1996; -- 21
+
+
