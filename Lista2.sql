@@ -48,5 +48,8 @@ WHERE (cor_preferida = 'Ouro' OR cor_preferida ='Amarelo-torrado') AND (nota_1+n
 SELECT nome,YEAR(data_nascimento)'Ano de Nascimento' FROM alunos; -- 19
 SELECT nick,MONTH(data_nascimento)'Mes de Nascimento' FROM alunos WHERE MONTH(data_nascimento)>6 ; -- 20
 SELECT COUNT(YEAR(data_nascimento))'Nascidos em 1996'FROM alunos WHERE YEAR(data_nascimento) = 1996; -- 21
+SELECT COUNT(YEAR(data_nascimento))'Nascidos em 2/2/1964 ou 94'FROM alunos
+ WHERE data_nascimento = '1964-02-02' OR YEAR(data_nascimento) = 1994; -- 22
+
 
 
