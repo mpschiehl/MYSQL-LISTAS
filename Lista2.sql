@@ -36,4 +36,9 @@ SELECT nome FROM alunos WHERE nome LIKE 'Francisco%';-- 10
 SELECT COUNT(NOME) 'Luc' FROM alunos WHERE nome LIKE '%Luc%'; -- 11
 SELECT nome,data_nascimento,signo FROM alunos WHERE signo = 'Áries';-- 12
 SELECT nome,nota_1 '1º',nota_2 '2º',nota_3 '3º',nota_4 '4º'FROM alunos WHERE  ((nota_1+nota_2+nota_3+nota_4)/4) =(SELECT MAX((nota_1+nota_2+nota_3+nota_4)/4)FROM alunos);-- 13
+SELECT nome, CAST(((nota_1+nota_2+nota_3+nota_4)/4) AS DECIMAL (4,2))'Média', 
+IF((nota_1+nota_2+nota_3+nota_4)/4 <5 , 'Reprovado',
+IF((nota_1+nota_2+nota_3+nota_4)/4 >7 , 'Aprovado','Em Exame'))'Situação'
+FROM alunos; -- 14
+SELECT nome,nota_1 '1º',nota_2 '2º',nota_3 '3º',nota_4 '4º'FROM alunos WHERE  ((nota_1+nota_2+nota_3+nota_4)/4) =(SELECT MIN((nota_1+nota_2+nota_3+nota_4)/4)FROM alunos);-- 15
 
